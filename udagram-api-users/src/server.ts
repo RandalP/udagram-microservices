@@ -6,11 +6,9 @@ import {IndexRouter} from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
 import {config} from './config/config';
-import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
-
+import {V0_USER_MODELS} from './controllers/v0/model.index';
 
 (async () => {
-  await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.addModels(V0_USER_MODELS);
   await sequelize.sync();
 
@@ -36,6 +34,9 @@ import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
     res.send( '/api/v0/' );
   } );
 
+  app.get("/health", (req, res) => {
+    res.status(200).send("udagram-api-users Alive");
+  });
 
   // Start the Server
   app.listen( port, () => {
