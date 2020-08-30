@@ -21,7 +21,7 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "*"
+      URL: "http://localhost:8100"
   api-users-svc:
     image: randalp/udagram-api-users
     environment:
@@ -33,7 +33,7 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "*"
+      URL: "http://localhost:8100"
   frontend:
     image: randalp/udagram-frontend
     ports:
