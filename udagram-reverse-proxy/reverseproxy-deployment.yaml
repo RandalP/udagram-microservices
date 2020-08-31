@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     service: reverseproxy
-  name: reverseproxy
+  name: reverseproxy-svc
 spec:
   selector:
     matchLabels:
