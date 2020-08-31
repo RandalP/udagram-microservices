@@ -20,9 +20,5 @@ RUN ionic build
 # Use nginx base image for deployment
 FROM nginx:alpine
 
-# Bind the port that the image will run on
-EXPOSE 8100
-
 # replace web directory
-RUN rm -rf /usr/share/nginx/html/*
 COPY --from=ionic /usr/src/app/www/ /usr/share/nginx/html/
