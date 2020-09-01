@@ -9,5 +9,4 @@ data:
   AWS_BUCKET: udagram-randal-dev
   AWS_REGION: ap-southeast-2
   AWS_PROFILE: default
-  JWT_SECRET: puppies
   URL: http://localhost:8100
