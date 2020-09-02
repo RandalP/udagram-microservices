@@ -1,0 +1,6 @@
+NAME                                READY   STATUS    RESTARTS   AGE
+api-feed-svc-9cfc54884-fs7wr        1/1     Running   0          5m49s
+api-users-svc-676cb7db75-mbkx4      1/1     Running   0          5m48s
+frontend-svc-5564bd694b-5qz4j       1/1     Running   0          5m47s
+frontend-svc-5564bd694b-prgpk       1/1     Running   0          5m47s
+reverseproxy-svc-79d9f4c6f8-xg4xf   1/1     Running   0          5m48s

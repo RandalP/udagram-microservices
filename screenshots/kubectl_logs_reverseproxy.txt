@@ -1,0 +1,13 @@
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+127.0.0.1 - - [01/Sep/2020:23:19:06 +0000] "OPTIONS /api/v0/feed HTTP/1.1" 204 0 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+127.0.0.1 - - [01/Sep/2020:23:19:06 +0000] "GET /api/v0/feed HTTP/1.1" 200 930 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+127.0.0.1 - - [01/Sep/2020:23:19:29 +0000] "OPTIONS /api/v0/users/auth/login HTTP/1.1" 204 0 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+127.0.0.1 - - [01/Sep/2020:23:19:29 +0000] "POST /api/v0/users/auth/login HTTP/1.1" 401 48 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+127.0.0.1 - - [01/Sep/2020:23:19:35 +0000] "OPTIONS /api/v0/users/auth/login HTTP/1.1" 204 0 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+127.0.0.1 - - [01/Sep/2020:23:19:35 +0000] "POST /api/v0/users/auth/login HTTP/1.1" 200 208 "http://a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com:8100/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"

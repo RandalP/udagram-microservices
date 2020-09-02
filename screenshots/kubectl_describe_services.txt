@@ -1,0 +1,76 @@
+Name:              api-feed-svc
+Namespace:         default
+Labels:            service=api-feed
+Annotations:       <none>
+Selector:          service=api-feed
+Type:              ClusterIP
+IP:                10.100.16.155
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.2.158:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              api-users-svc
+Namespace:         default
+Labels:            service=api-users
+Annotations:       <none>
+Selector:          service=api-users
+Type:              ClusterIP
+IP:                10.100.108.91
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.16.237:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     frontend-svc
+Namespace:                default
+Labels:                   service=frontend
+Annotations:              <none>
+Selector:                 service=frontend
+Type:                     LoadBalancer
+IP:                       10.100.26.153
+LoadBalancer Ingress:     a0f04089a765647e2ad4fe85fb1630c8-528665860.ap-southeast-2.elb.amazonaws.com
+Port:                     8100  8100/TCP
+TargetPort:               80/TCP
+NodePort:                 8100  30996/TCP
+Endpoints:                172.31.38.138:80,172.31.7.133:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age    From                Message
+  ----    ------                ----   ----                -------
+  Normal  EnsuringLoadBalancer  7m58s  service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   7m56s  service-controller  Ensured load balancer
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         172.31.14.208:443,172.31.37.87:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              reverseproxy-svc
+Namespace:         default
+Labels:            service=reverseproxy
+Annotations:       <none>
+Selector:          service=reverseproxy
+Type:              ClusterIP
+IP:                10.100.113.98
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.9.156:8080
+Session Affinity:  None
+Events:            <none>
