@@ -18,7 +18,7 @@ export class AuthService {
 
   initToken() {
     const token = localStorage.getItem(JWT_LOCALSTORE_KEY);
-    const user = <User> JSON.parse(localStorage.getItem(USER_LOCALSTORE_KEY));
+    const user = JSON.parse(localStorage.getItem(USER_LOCALSTORE_KEY)) as User;
     if (token && user) {
       this.setTokenAndUser(token, user);
     }
