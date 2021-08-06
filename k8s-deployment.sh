@@ -14,4 +14,4 @@ kubectl autoscale deployment reverseproxy-svc --cpu-percent=50 --min=1 --max=2
 kubectl autoscale deployment api-feed-svc --cpu-percent=50 --min=1 --max=2
 kubectl autoscale deployment api-users-svc --cpu-percent=50 --min=1 --max=2
 
-echo Run "kubectl port-forward service/reverseproxy-svc 8080:8080"
+echo Run "'kubectl port-forward service/reverseproxy-svc 8080:8080'" to access API locally

@@ -4,9 +4,9 @@ metadata:
   name: env-config
   namespace: default
 data:
-  POSTGRES_HOST: udagram.cfjnikudtcpy.ap-southeast-2.rds.amazonaws.com
+  POSTGRES_HOST: database-udagram.cpfwuk0mljrc.ap-southeast-2.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: udagram-randal-dev
+  AWS_BUCKET: randal-2175-5488-3868-dev
   AWS_REGION: ap-southeast-2
   AWS_PROFILE: default
-  URL: http://localhost:8100
+  URL: http://aef91966e715943f98462910135d355b-628368312.ap-southeast-2.elb.amazonaws.com:8100
