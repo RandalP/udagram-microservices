@@ -9,5 +9,5 @@ data:
   AWS_BUCKET: randal-2175-5488-3868-dev
   AWS_REGION: ap-southeast-2
   AWS_PROFILE: default
-  URL: http://10.100.246.31:8100
-  API_HOST: http://10.100.10.198:8080/api/v0
+  URL: http://aef91966e715943f98462910135d355b-628368312.ap-southeast-2.elb.amazonaws.com:8100
+  API_HOST: http://ac8bdaeb1f00a414ebf3e99c92a23d05-1261816060.ap-southeast-2.elb.amazonaws.com:8080/api/v0
