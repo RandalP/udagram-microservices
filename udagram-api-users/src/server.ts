@@ -10,6 +10,8 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
 (async () => {
   await sequelize.addModels(V0_USER_MODELS);
+
+  console.debug("Initialize database connection...");
   await sequelize.sync();
 
   const app = express();
@@ -24,7 +26,8 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
       'X-Access-Token', 'Authorization',
     ],
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: config.url,
+    preflightContinue: true,
+    origin: "*"
   }));
 
   app.use('/api/v0/', IndexRouter);
